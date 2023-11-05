@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // For Part 3, where we use a random number
+        //  random number
         Random randomGenerator = new Random();
         int magicNumber = randomGenerator.Next(1, 101);
 
@@ -15,6 +15,8 @@ class Program
         int guesses = 1;
         string yes_no = "yes";
 
+        // Strech challenge
+        // Do while checks if user wants to play again
         do
         {
             while (guess_number != magicNumber)
