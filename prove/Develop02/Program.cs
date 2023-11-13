@@ -32,10 +32,8 @@ class Program
 
             Console.Write("What Would you Like to do? ");
             string inputChoice = Console.ReadLine();
-            choice = Convert.ToInt16(inputChoice);
+            choice = int.Parse(inputChoice);
             
-            
-
             if (choice == 1)
             {
                 // Read the questions
@@ -94,17 +92,20 @@ class Program
                 }
                 
             }
+            else if (choice == 5)
+            {
+                break;
+            }
+            else
+            {
+                choice = -1;
+            }
 
             
             
         } while(choice!= 5);
-        choice =1;
         
-        
-
-        
-        
-
+    
 
     }
 }
