@@ -81,10 +81,7 @@ class Program
                     SaveFile journalEntry = new SaveFile(writeList);
                     journalEntry.Save();
                     saved_location= journalEntry.SavedFileName();
-                    foreach(string line in writeList)
-                    {
-
-                    }
+                    
                 }
                 else
                 {

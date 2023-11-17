@@ -18,11 +18,6 @@ public class SaveFile
         fileName = input+".txt";
         using (StreamWriter outputFile = new StreamWriter(fileName,true))
         {
-            // You can add text to the file with the WriteLine method
-            // DateTime theCurrentTime = DateTime.Now;
-            // string dateText = theCurrentTime.ToShortDateString();
-            // outputFile.WriteLine($"Date: {dateText} - {txtEntry}");
-            //Console.WriteLine("Journal Entry Saved");
             if (txtEntry.Count !=0 )
             {
                 foreach (string wline in txtEntry)
