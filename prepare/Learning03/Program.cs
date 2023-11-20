@@ -22,7 +22,6 @@ class Program
             newWords.Add(word);
         }
         
-        string disp= "";
         //int idx=1;
         Console.WriteLine("===========================");
         newWords[1] = "_______";
