@@ -1,3 +1,4 @@
+
 using System;
 class Program
 {
@@ -15,13 +16,13 @@ class Program
 
         int numberOfHiddenWors = 2;
 
-        // press "any key" or type "quit".
+        
         Console.Clear();
         Console.WriteLine(scripture.ScriptureDisplay());
         Console.WriteLine("Press Any Key to begin, or 'quit' to exit:");
         string input = Console.ReadLine();
 
-        // loop Hide words .
+     
         while (!scripture.AllWordsHidden() && !input.Equals("quit")) 
         {
             scripture.HideRandomWords(numberOfHiddenWors);
@@ -35,7 +36,7 @@ class Program
             }
             else
             {
-                // Prompt the user to press "Enter" or type "quit".
+
                 Console.WriteLine("Press Enter to continue, or type 'quit' to exit:");
                 input = Console.ReadLine();;
             }

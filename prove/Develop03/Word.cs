@@ -6,10 +6,7 @@ class Word
 
     public Word(string text)
     {
-        if (string.IsNullOrEmpty(text))
-        {
-            throw new ArgumentException("Text cannot be null or empty.", nameof(text));
-        }
+
         _text = text;
         _isHidden = false;
     }
