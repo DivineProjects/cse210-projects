@@ -1,3 +1,5 @@
+// creativity and exceeds core requirements
+// reads files
 
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ class Program
     {
         
 
-        string fileLocation = "prove\\Develop03\\scripturez.json";
+        string fileLocation = "prove/Develop03/scripturez.json";
         List<Scripture> scriptures = new List<Scripture>();
         Random random = new Random();
 
