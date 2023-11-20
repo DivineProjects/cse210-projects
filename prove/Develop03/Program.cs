@@ -1,20 +1,38 @@
 
 using System;
+using System.Collections.Generic;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 class Program
 {
     static void Main(string[] args)
     {
         
-        string verses = "He will bestow countless privilege blessings, and miracles upon the faithful";
+
+        string fileLocation = "prove\\Develop03\\scripturez.json";
         List<Scripture> scriptures = new List<Scripture>();
-        
         Random random = new Random();
-        // string verses = "";
-        // scriptures = [["He will bestow countless privileges,"],[" blessings, and miracles upon the faithful"]];
+
+        // load jason file
+        try
+        {
+            using (StreamReader reader = new StreamReader(fileLocation))
+            {
+                string json = reader.ReadToEnd();
+                scriptures = JsonSerializer.Deserialize<List<Scripture>>(json);
+
+            }
+            Console.WriteLine($"Welcome to Scripture  Memorise");
+        }
+        catch
+        {
+            Console.WriteLine($"failed to load");
+        }
+
         int index = random.Next(scriptures.Count);
         Scripture scripture = scriptures[index];
 
-        int numberOfHiddenWors = 2;
+        int numberOfHiddenWords = 2;
 
         
         Console.Clear();
@@ -25,7 +43,7 @@ class Program
      
         while (!scripture.AllWordsHidden() && !input.Equals("quit")) 
         {
-            scripture.HideRandomWords(numberOfHiddenWors);
+            scripture.HideRandomWords(numberOfHiddenWords);
             Console.Clear();
             Console.WriteLine(scripture.GetDisplayText());
 

@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 class Scripture
 {
     
@@ -8,9 +9,9 @@ class Scripture
 
     private List<Word> words = new List<Word>();
 
-    Reference _reference = new Reference();
+    public string _reference;
 
-    public Scripture(Reference reference, string text)
+    public Scripture(string reference, string text)
     {
         _reference = reference;
         _text = text;
